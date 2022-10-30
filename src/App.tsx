@@ -66,7 +66,6 @@ function App() {
           setFakeLoading(true);
           setTimeout(() => {
             setFakeLoading(false)
-            console.log(Math.floor(Math.random()*1000)-200)
           }, Math.random()*1000);
           setCurrentStep(currentStep + 1);
         }
