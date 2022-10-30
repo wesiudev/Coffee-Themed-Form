@@ -1,0 +1,180 @@
+@import '_floatingInput.scss';
+@import '_selectInput.scss';
+@import '_loader.scss';
+
+body {
+  padding:0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(90deg, rgba(43, 43, 43, 0.8) 0%, rgba(29, 29, 29, 0.8) 100%),  url(https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1061&q=80);
+  background-size: contain;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} 
+.wrapper{
+  display:flex;
+  width:100vw;
+  height:100vh;
+  justify-content: center;
+  align-items: center;
+  &__content{
+    padding-top: 20px;
+    width:100%;
+    z-index: 0;
+    height:auto;
+    .receipt-animate{
+      animation: roll .6s ease-in forwards;
+      animation-delay: .6s;
+    }
+    &__receipt{
+      height:0vh;
+      width:200px;
+      color:transparent;
+      background-color: rgb(226, 226, 226);
+      padding:15px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &__details{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        bottom:15px;
+        left:15px;
+        width: 100%;
+        &__remarks{
+          display:flex;
+          flex-direction: column;
+        }
+        &__price{
+          display:flex;
+          flex-direction: column;
+        }
+      }
+      h3{
+        text-align: center;
+        color: black;
+      }
+      h5{
+        text-align: center;
+      }
+    }
+    &__cups{
+      display:flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .chosenCup{
+        background-color: rgb(159, 238, 159) !important;
+      }
+      &__cup{
+        margin:10px;
+        height:120px;
+        width:120px;
+        border:5px solid black;
+        background-color: rgb(221, 221, 221);
+        cursor: pointer;
+        &:hover{
+          background-color: white;
+        }
+        img{
+          padding:20px 10px;
+          width:100px;
+        }
+      }
+    }
+    width:500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(10, 10, 10, 0.9);
+    box-shadow: 8px 8px 24px 0px rgb(0, 0, 0);
+    &__boolean{
+        margin: 0 auto;
+        width:30px;
+        height:10px;
+        border: none;
+        background-color: rgba(128, 128, 128, 0.164);
+        position:relative;
+        div{
+          position:absolute;
+          left:-8px;
+          top:-5px;
+          background-color: rgb(199, 183, 183);
+          width:20px;
+          height:20px;
+          border-radius: 50%;
+          transition:.3s;
+        }
+        .activated{
+            background-color: rgb(86, 179, 86);
+            left:17px;
+            transition:.3s;
+        }
+      }
+    .highlight{
+      width:8px;
+      height:8px;
+      background-color: white;
+    }
+    &__dots{
+      display:flex;
+      align-items: center;
+      padding:35px 0;
+      &__dot{
+        width:6px;
+        height:6px;
+        background-color: rgb(207, 207, 207);
+        position:relative;
+        margin:5px 15px;
+        border-radius: 5px;
+      }
+    }
+    h1{
+      color:rgb(241, 241, 241);
+      text-shadow: 1px 2px blueviolet;  
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h2{
+      color:rgb(241, 241, 241);
+      text-shadow: 1px 2px blueviolet;  
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+    form{
+      display:flex;
+      flex-direction: column;
+      height:35vh;
+      justify-content: space-evenly;
+    }
+    .submitBtn{
+      width: 225px;
+      height:40px;
+      color:white;
+      font-size: 16px;
+      text-shadow: 1px 1px blueviolet;
+      background-color: black;
+      border: 1px solid blueviolet;
+      margin: 0 auto;
+      &:hover{
+        background-color: rgb(27, 27, 27);
+        cursor: pointer;
+      }
+    }
+  }  
+}
+@keyframes roll {
+  0%{height:0vh;}
+  50%{height:25vh;color:rgba(0, 0, 0, 0);}
+  100%{height:35vh;color:black;}
+}
