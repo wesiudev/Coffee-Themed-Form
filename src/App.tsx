@@ -22,7 +22,6 @@ function App() {
     coffeeId: "",
     coffeeName: "",
   });
-
   const [currentStep, setCurrentStep] = useState<number>(1);
 
   const [isSubmitted, setSubmitted] = useState(false);

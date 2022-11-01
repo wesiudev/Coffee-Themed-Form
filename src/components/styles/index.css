@@ -299,6 +299,7 @@ code {
   bottom: 15px;
   left: 15px;
   width: 100%;
+  margin-bottom: 30px;
 }
 .wrapper__content__receipt__details__remarks {
   display: flex;
@@ -396,7 +397,7 @@ code {
 .wrapper__content form {
   display: flex;
   flex-direction: column;
-  height: 35vh;
+  height: 30vh;
   justify-content: space-evenly;
 }
 .wrapper__content .submitBtn {
